@@ -35,7 +35,7 @@ Do the following:
 var adam = 1
 var adam2 = 2
 if (adam <=1){
-  console.log
+  console.log(adam = 2)
 }
 
 /*
@@ -48,10 +48,9 @@ Do the following:
 
    HINT: look up the Number method
 */
-function 1999 = "1999";
-if (1999 = '1999');
-console.log(true)
+let thing = '1999';
 
+console.log(parseInt(thing, 10))
 
 
 /*
@@ -114,9 +113,14 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(years, lbs){
-    return 
+function hungryDog(weight, age){
+    if (age >= 1){
+      if (weight <= 15){
+          return weight * .03;
+      }
+    }
   }
+  console.log(hungryDog(15, 1))
 
 
 

@@ -170,35 +170,17 @@ else (computer === 2)
 function game(user, computer){
   if (user === "scissors" && computer === "paper"){
     return "you win!";
-
   }
   else if (user === "paper" && computer === "rock"){
     return "you win!";
   }
-  else if (user === "rock" && computer === "paper"){
+  else if (user === "rock" && computer === "scissors"){
     return "you win!";
   }
-  else if (user === "scissors" && computer === "rock"){
-    return "you lose!";
+  else if (computer === user) {
+      return "it's a tie";   
   }
-  else if (user === "paper" && computer === "scissors"){
-    return "you lose!";
-  }
-  else if (user === "rock" && computer === "paper"){
-    return "you lose!";
-  }
-  else if (computer === "scissors" && user === "paper"){
-    return "you lose!";
-  }
-  else if (computer === "paper" && user === "rock"){
-    return "you lose!";
-  }
-  else if (computer === "rock" && user === "scissors"){
-    return "you lose!";
-  }
-  else {
-      return "it's a tie!";   
-  }
+  else {return "you lose!"}
 }
 console.log(game(2,computer));
   
@@ -232,9 +214,9 @@ Using the feet function below do the following:
 */
 
 function feet(cm){
-     return ( cm / 30.48)
+     return ( cm / 30.48);
   }
- 
+ console.log(feet(60))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -277,7 +259,7 @@ function grade(score){
   }else if (score >=60){
     return 'you got a D'
   }else (score < 59)
-    return 'You got a F';
+    return 'you got an F';
   }
   
   console.log(grade(40));

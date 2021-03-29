@@ -117,10 +117,28 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(lbs, years){
+  if (years >= 1){
+    if (lbs > 15){
+      return lbs * 0.02;
+    }else if (lbs >= 11 && lbs <= 15){
+      return lbs * 0.03;
+    }else if (lbs >= 6 && lbs <= 10){
+      return lbs * 0.04;
+    }else {
+    return lbs * 0.05;
   }
-
+}else {
+  if (years >=2/12 && years <=4/12){
+    return lbs * 0.10;
+  }else if (years >= 4/12 && years <=7/12){
+    return lbs * 0.05;
+  }else if (years >= 7/12 && years < 1){
+    return lbs * 0.04;
+  }
+}
+}
+console.log(hungryDog(15,1));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -144,9 +162,34 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-    /*add your code here*/
+let computer = Math.floor(Math.random()*3);
+if (computer === 0){
+  computer = "scissors"
 }
+else if (computer === 1){
+  computer = "paper"
+}
+else (computer === 2)
+  {computer = "rock"
+}
+
+
+function game(user, computer){
+  if (user === "scissors" && computer === "paper"){
+    return "you win!";
+  }
+  else if (user === "paper" && computer === "rock"){
+    return "you win!";
+  }
+  else if (user === "rock" && computer === "scissors"){
+    return "you win!";
+  }
+  else if (computer === user) {
+      return "it's a tie";   
+  }
+  else {return "you lose!"}
+}
+console.log(game(1,computer));
   
   
 
@@ -161,10 +204,10 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
-  }
-
+function miles(km){
+  return (km * 0.621371);
+}
+console.log(miles(2));
 
 
 //Task 5b - Feet to CM
